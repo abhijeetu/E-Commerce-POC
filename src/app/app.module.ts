@@ -2,7 +2,7 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-import { CarouselModule } from 'ng2-bootstrap/ng2-bootstrap';
+import {CarouselModule} from 'ng2-bootstrap/ng2-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -14,6 +14,9 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 import { MenuComponent } from './menu/menu.component';
 import { ProductDeatailsComponent } from './product/pDetails/product.details.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 
 @NgModule({
   imports: [
@@ -29,7 +32,10 @@ import { CarouselComponent } from './carousel/carousel.component';
     AboutComponent,
     MenuComponent,
     ProductDeatailsComponent,
-    CarouselComponent
+    CarouselComponent,
+    RecipeListComponent,
+    RecipeItemComponent,
+    RecipeDetailComponent
   ],
   providers: [
     ApiService

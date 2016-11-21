@@ -10,7 +10,7 @@ export class ProductDeatailsComponent implements OnInit {
   id: any;
   test: any;
 
-  constructor(router:Router, private route: ActivatedRoute) {
+  constructor(router: Router, private route: ActivatedRoute) {
 
   }
 
