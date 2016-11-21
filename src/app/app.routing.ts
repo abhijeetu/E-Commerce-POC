@@ -10,4 +10,4 @@ const routes: Routes = [
   { path: 'details', component: ProductDeatailsComponent}
 ];
 
-export const routing = RouterModule.forRoot(routes);
+export const routing = RouterModule.forRoot(routes);     
