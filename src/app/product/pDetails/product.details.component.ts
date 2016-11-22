@@ -3,7 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'product-details',
-  templateUrl: './product.details.component.html'
+  templateUrl: './product.details.component.html',
+  styleUrls: ['./cloudzoom.css']
 })
 export class ProductDeatailsComponent implements OnInit {
 
@@ -16,6 +17,7 @@ export class ProductDeatailsComponent implements OnInit {
 
   ngOnInit() {
     console.log('Hello Product Deatails');
+    CloudZoom.quickStart();
     this.route.params.subscribe(params => {
       this.id = params['pid'];
       console.log('pid=' + this.id);

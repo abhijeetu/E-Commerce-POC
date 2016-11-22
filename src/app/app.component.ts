@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { ApiService } from './shared';
 
 import '../style/app.css';
-
 import '../style/font-awesome.min.css';
 // import '../style/prettyPhoto.css';
 import '../style/price-range.css';
