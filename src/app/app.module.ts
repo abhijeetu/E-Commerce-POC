@@ -17,8 +17,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
-import { LoginComponent } from "./login/login.component";
-import { AuthenticationService } from "./login/authentication.service";
+import { LoginComponent } from './login/login.component';
+import { AuthenticationService } from './login/authentication.service';
 
 @NgModule({
   imports: [
