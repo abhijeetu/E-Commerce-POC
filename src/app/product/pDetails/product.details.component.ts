@@ -1,10 +1,12 @@
+declare let CloudZoom: any;
+
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router'
+import '../../../js/cloudzoom.js'
 
 @Component({
   selector: 'product-details',
-  templateUrl: './product.details.component.html',
-  styleUrls: ['./cloudzoom.css']
+  templateUrl: './product.details.component.html'
 })
 export class ProductDeatailsComponent implements OnInit {
 
