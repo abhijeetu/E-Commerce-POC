@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ApiService } from './shared';
 import { routing } from './app.routing';
-
+import { RatingModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 import { MenuComponent } from './menu/menu.component';
 import { ProductDeatailsComponent } from './product/pDetails/product.details.component';
@@ -19,6 +19,9 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item.component
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { LoginComponent } from "./login/login.component";
 import { AuthenticationService } from "./login/authentication.service";
+import { RatingDemoComponent } from "./product/pDetails/rating.component";
+import { TooltipModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { TooltipDemoComponent } from './product/pDetails/tooltip.component';
 
 @NgModule({
   imports: [
@@ -26,7 +29,9 @@ import { AuthenticationService } from "./login/authentication.service";
     HttpModule,
     FormsModule,
     CarouselModule,
-    routing
+    routing,
+    RatingModule,
+    TooltipModule
   ],
   declarations: [
     AppComponent,
@@ -38,7 +43,9 @@ import { AuthenticationService } from "./login/authentication.service";
     RecipeListComponent,
     RecipeItemComponent,
     RecipeDetailComponent,
-    LoginComponent
+    LoginComponent,
+    RatingDemoComponent,
+    TooltipDemoComponent
   ],
   providers: [
     ApiService,

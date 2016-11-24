@@ -3,6 +3,8 @@ declare let CloudZoom: any;
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router'
 import '../../../js/cloudzoom.js'
+import { RatingDemoComponent } from './rating.component';
+import { TooltipDemoComponent } from './tooltip.component';
 
 @Component({
   selector: 'product-details',
