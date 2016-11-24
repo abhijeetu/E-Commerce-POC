@@ -13,12 +13,12 @@ import '@angularclass/hmr';
 // You can import js, ts, css, sass, ...
 
 // import 'jquery/dist/jquery.js'
-import 'bootstrap/dist/js/bootstrap.js'
-import './js/jquery.scrollUp.min.js'
-import './js/price-range.js'
-import './js/jquery.prettyPhoto.js'
-// import './js/main.js'
-import './js/cloudzoom.js'
+import 'bootstrap/dist/js/bootstrap.js';
+import './js/jquery.scrollUp.min.js';
+import './js/price-range.js';
+import './js/jquery.prettyPhoto.js';
+// import './js/main.js';
+import './js/cloudzoom.js';
 
 // import CSS here
 import './style/app.css';
@@ -28,4 +28,4 @@ import './style/price-range.css';
 import './style/animate.css';
 import './style/main.css';
 import './style/responsive.css';
-import './style/cloudzoom.css'
+import './style/cloudzoom.css';

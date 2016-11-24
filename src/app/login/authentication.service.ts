@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response } from '@angular/http';
-import { Observable, ReplaySubject } from 'rxjs';
-import 'rxjs/add/operator/map'
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AuthenticationService {
@@ -9,14 +9,14 @@ export class AuthenticationService {
 
   constructor(private http: Http) {
     // set token if saved in local storage
-    var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let currentUser = JSON.parse(localStorage.getItem('currentUser'));
     this.token = currentUser && currentUser.token;
   }
 
   login(username: string, password: string): Observable<boolean> {
 
-    //Testing purpose
-    //let testUser = { username: 'test', password: 'test', firstName: 'Test', lastName: 'User' };
+    // Testing purpose
+    // let testUser = { username: 'test', password: 'test', firstName: 'Test', lastName: 'User' };
 
     return this.http.post('/api/authenticate', JSON.stringify({ username: username, password: password }))
       .map((response: Response) => {
