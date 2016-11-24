@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="brands-name">
+      <ul class="nav nav-pills nav-stacked" *ngFor="let item of items">
+        <li><brand-item [recipe]="item" (click)="onSelected(item)"></brand-item></li>
+      </ul>
+    </div>
+  </div>
+</div>
