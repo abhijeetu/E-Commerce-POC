@@ -19,9 +19,9 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item.component
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { LoginComponent } from "./login/login.component";
 import { AuthenticationService } from "./login/authentication.service";
-import { RatingDemoComponent } from "./product/pDetails/rating.component";
+import { RatingDemoComponent } from "./rating/rating.component";
 import { TooltipModule } from 'ng2-bootstrap/ng2-bootstrap';
-import { TooltipDemoComponent } from './product/pDetails/tooltip.component';
+import { TooltipDemoComponent } from './tooltip/tooltip.component';
 
 @NgModule({
   imports: [
