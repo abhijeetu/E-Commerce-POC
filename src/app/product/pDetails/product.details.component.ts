@@ -1,31 +1,31 @@
-declare let CloudZoom: any;
-
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router'
-import '../../../js/cloudzoom.js'
-import { RatingDemoComponent } from '../rating/rating.component';
-import { TooltipDemoComponent } from '../tooltip/tooltip.component';
+import {Component, OnInit, Input, ViewChild} from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import {ModalDemoComponent} from '../../pop-up/pop-up.component';
 
 @Component({
   selector: 'product-details',
-  templateUrl: './product.details.component.html'
+  templateUrl: './product.details.component.html',
+  styleUrls: ['./cloudzoom.css']
 })
 export class ProductDeatailsComponent implements OnInit {
 
+  @ViewChild(ModalDemoComponent) public modal: ModalDemoComponent;
+  @Input() itemStatus: any;
   id: any;
-  test: any;
+  modalData1 = {
+    'typeOfModal' : 'addToCart'
+  };
 
-  constructor(router: Router, private route: ActivatedRoute) {
-
-  }
+  constructor(router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log('Hello Product Deatails');
     CloudZoom.quickStart();
     this.route.params.subscribe(params => {
-      this.id = params['pid'];
-      console.log('pid=' + this.id);
+      this.modalData1['name'] = params['name'];
+      this.modalData1['id'] = params['id'];
+      this.modalData1['price'] = params['price'];
+      this.modalData1['imagePath'] = params['imagePath'];
+      this.modalData1['quantity'] = params['quantity'];
     });
   }
-
 }

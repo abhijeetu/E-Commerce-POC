@@ -28,7 +28,7 @@
             <h2>Brands</h2>
             <!--<div class="brands-name">-->
               <!--<ul class="nav nav-pills nav-stacked">-->
-            <rb-recipe-list (recipeSelected)="selectedRecipe = $event"></rb-recipe-list>
+            <brand-list (brandSelected)="selectedBrand = $event"></brand-list>
                 <!--<li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>-->
               <!--</ul>-->
             <!--</div>-->
@@ -54,74 +54,7 @@
         <div class="features_items"><!--features_items-->
           <h2 class="title text-center">Features Items</h2>
 
-          <rb-recipe-detail [selectedRecipe]="selectedRecipe"></rb-recipe-detail>
-          <!--<div class="col-sm-4">-->
-            <!--<div class="product-image-wrapper">-->
-              <!--<div class="single-products">-->
-                <!--<div class="productinfo text-center">-->
-                  <!--<rb-recipe-detail [selectedRecipe]="selectedRecipe"></rb-recipe-detail>-->
-                  <!--&lt;!&ndash;<img src="images/home/product1.jpg" alt="" />&ndash;&gt;-->
-                  <!--<h2>$56</h2>-->
-                  <!--<p>Easy Polo Blue Edition</p>-->
-                  <!--<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart">-->
-                  <!--</i>Add to cart</a>-->
-                <!--</div>-->
-              <!--</div>-->
-              <!--<div class="choose">-->
-                <!--<ul class="nav nav-pills nav-justified">-->
-                  <!--<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>-->
-                  <!--<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>-->
-                <!--</ul>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="col-sm-4">-->
-            <!--<div class="product-image-wrapper">-->
-              <!--<div class="single-products">-->
-                <!--<div class="productinfo text-center">-->
-                  <!--<rb-recipe-detail [selectedRecipe]="selectedRecipe"></rb-recipe-detail>-->
-                  <!--&lt;!&ndash;<img src="images/home/product1.jpg" alt="" />&ndash;&gt;-->
-                  <!--<h2>$56</h2>-->
-                  <!--<p>Easy Polo Blue Edition</p>-->
-                  <!--<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart">-->
-                  <!--</i>Add to cart</a>-->
-                <!--</div>-->
-              <!--</div>-->
-              <!--<div class="choose">-->
-                <!--<ul class="nav nav-pills nav-justified">-->
-                  <!--<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>-->
-                  <!--<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>-->
-                <!--</ul>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="col-sm-4">-->
-            <!--<div class="product-image-wrapper">-->
-              <!--<div class="single-products">-->
-                <!--<div class="productinfo text-center">-->
-                  <!--<img src="images/home/product2.jpg" alt="" />-->
-                  <!--<h2>$56</h2>-->
-                  <!--<p>Easy Polo Black Edition</p>-->
-                  <!--<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>-->
-                <!--</div>-->
-                <!--<div class="product-overlay">-->
-                  <!--<div class="overlay-content">-->
-                    <!--<h2>$56</h2>-->
-                    <!--<p>Easy Polo Black Edition</p>-->
-                    <!--<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-              <!--<div class="choose">-->
-                <!--<ul class="nav nav-pills nav-justified">-->
-                  <!--<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>-->
-                  <!--<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>-->
-                <!--</ul>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-
-
+          <brand-detail [selectedBrand]="selectedBrand"></brand-detail>
 
 
         </div><!--features_items-->
@@ -136,7 +69,7 @@
                   <div class="product-image-wrapper">
                     <div class="single-products">
                       <div class="productinfo text-center">
-                        <img src="images/home/dslr1.jpg" alt="" />
+                        <img src="images/home/recommend1.jpg" alt="" />
                         <h2>$56</h2>
                         <p>Easy Polo Black Edition</p>
                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -149,7 +82,7 @@
                   <div class="product-image-wrapper">
                     <div class="single-products">
                       <div class="productinfo text-center">
-                        <img src="images/home/dslr2.jpg" alt="" />
+                        <img src="images/home/recommend2.jpg" alt="" />
                         <h2>$56</h2>
                         <p>Easy Polo Black Edition</p>
                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -162,7 +95,7 @@
                   <div class="product-image-wrapper">
                     <div class="single-products">
                       <div class="productinfo text-center">
-                        <img src="images/home/dslr4.jpg" alt="" />
+                        <img src="images/home/recommend3.jpg" alt="" />
                         <h2>$56</h2>
                         <p>Easy Polo Black Edition</p>
                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -177,7 +110,7 @@
                   <div class="product-image-wrapper">
                     <div class="single-products">
                       <div class="productinfo text-center">
-                        <img src="images/home/dslr2.jpg" alt="" />
+                        <img src="images/home/recommend1.jpg" alt="" />
                         <h2>$56</h2>
                         <p>Easy Polo Black Edition</p>
                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -190,7 +123,7 @@
                   <div class="product-image-wrapper">
                     <div class="single-products">
                       <div class="productinfo text-center">
-                        <img src="images/home/dslr4.jpg" alt="" />
+                        <img src="images/home/recommend2.jpg" alt="" />
                         <h2>$56</h2>
                         <p>Easy Polo Black Edition</p>
                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -203,7 +136,7 @@
                   <div class="product-image-wrapper">
                     <div class="single-products">
                       <div class="productinfo text-center">
-                        <img src="images/home/dslr1.jpg" alt="" />
+                        <img src="images/home/recommend3.jpg" alt="" />
                         <h2>$56</h2>
                         <p>Easy Polo Black Edition</p>
                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>

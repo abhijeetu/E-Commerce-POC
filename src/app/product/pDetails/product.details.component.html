@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-9 padding-right">
+    <div class="col-sm-12 padding-right">
   <div class="product-details"><!--product-details-->
     <div class="col-sm-5">
       <div class="view-product">
@@ -10,7 +10,6 @@
       </div>
 
       <div id="similar-product" class="carousel slide" data-ride="carousel">
-
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
@@ -45,19 +44,16 @@
     <div class="col-sm-7">
       <div class="product-information"><!--/product-information-->
         <img src="/images/product-details/new.jpg" class="newarrival" alt="" />
-        <h2>Nikon K 50 (Single DAL 18-55 mm WR) Lens) <tooltip-demo></tooltip-demo> Camera</h2>
-
-        <p>Web ID: 1089772</p>
+        <h2>{{modalData1.name}}</h2>
+        <p>Web ID: {{modalData1.id}}</p>
         <img src="/images/product-details/rating.png" alt="" />
-								<span>
-									<span>US $59</span>
-									<label>Quantity:</label>
-									<input type="text" value="3" />
-									<button type="button" class="btn btn-fefault cart">
-										<i class="fa fa-shopping-cart"></i>
-										Add to cart
-									</button>
-								</span>
+        <span>
+          <span>US {{modalData1.price}}</span>
+          <label>Quantity</label>
+          <input type="text" value="{{modalData1.quantity}}" />
+          <button  type="button"
+                  class="btn btn-default cart"><i class="fa fa-globe"></i> Add To Cart </button>
+        </span>
         <p><b>Availability:</b> In Stock</p>
         <p><b>Condition:</b> New</p>
         <p><b>Brand:</b> E-SHOPPER</p>
@@ -246,8 +242,7 @@
 											<input type="email" placeholder="Email Address"/>
 										</span>
             <textarea name="" ></textarea>
-            <b>Rating: </b>
-            <span><rating-demo></rating-demo></span>
+            <b>Rating: </b> <img src="/images/product-details/rating.png" alt="" />
             <button type="button" class="btn btn-default pull-right">
               Submit
             </button>
@@ -268,7 +263,7 @@
             <div class="product-image-wrapper">
               <div class="single-products">
                 <div class="productinfo text-center">
-                  <img src="/images/home/dslr1.jpg" alt="" />
+                  <img src="/images/home/recommend1.jpg" alt="" />
                   <h2>$56</h2>
                   <p>Easy Polo Black Edition</p>
                   <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -280,7 +275,7 @@
             <div class="product-image-wrapper">
               <div class="single-products">
                 <div class="productinfo text-center">
-                  <img src="/images/home/dslr2.jpg" alt="" />
+                  <img src="/images/home/recommend2.jpg" alt="" />
                   <h2>$56</h2>
                   <p>Easy Polo Black Edition</p>
                   <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -292,11 +287,10 @@
             <div class="product-image-wrapper">
               <div class="single-products">
                 <div class="productinfo text-center">
-                  <img src="/images/home/dslr4.jpg" alt="" />
+                  <img src="/images/home/recommend3.jpg" alt="" />
                   <h2>$56</h2>
                   <p>Easy Polo Black Edition</p>
-                  <button type="button" class="btn btn-default add-to-cart">
-                    <i class="fa fa-shopping-cart"></i>Add to cart</button>
+                  <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
                 </div>
               </div>
             </div>
@@ -307,7 +301,7 @@
             <div class="product-image-wrapper">
               <div class="single-products">
                 <div class="productinfo text-center">
-                  <img src="/images/home/dslr2.jpg" alt="" />
+                  <img src="/images/home/recommend1.jpg" alt="" />
                   <h2>$56</h2>
                   <p>Easy Polo Black Edition</p>
                   <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -319,7 +313,7 @@
             <div class="product-image-wrapper">
               <div class="single-products">
                 <div class="productinfo text-center">
-                  <img src="/images/home/dslr4.jpg" alt="" />
+                  <img src="/images/home/recommend2.jpg" alt="" />
                   <h2>$56</h2>
                   <p>Easy Polo Black Edition</p>
                   <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -331,7 +325,7 @@
             <div class="product-image-wrapper">
               <div class="single-products">
                 <div class="productinfo text-center">
-                  <img src="/images/home/dslr1.jpg" alt="" />
+                  <img src="/images/home/recommend3.jpg" alt="" />
                   <h2>$56</h2>
                   <p>Easy Polo Black Edition</p>
                   <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -353,8 +347,3 @@
 </div>
 </div>
 </div>
-
-<!-- Call quick start function. -->
-<script type="text/javascript">
-  CloudZoom.quickStart();
-</script>

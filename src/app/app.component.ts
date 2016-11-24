@@ -1,6 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, ViewContainerRef } from '@angular/core';
 
 import { ApiService } from './shared';
+
+import '../style/app.css';
+import '../style/font-awesome.min.css';
+// import '../style/prettyPhoto.css';
+import '../style/price-range.css';
+import '../style/animate.css';
+import '../style/main.css';
+import '../style/responsive.css';
+
+
 
 @Component({
   selector: 'my-app', // <my-app></my-app>
@@ -8,8 +18,10 @@ import { ApiService } from './shared';
 })
 export class AppComponent {
   url = 'https://github.com/preboot/angular2-webpack';
+  private viewContainerRef: ViewContainerRef;
 
-  constructor(private api: ApiService) {
+  public constructor(private api: ApiService, viewContainerRef: ViewContainerRef) {
     // Do something with api
+    this.viewContainerRef = viewContainerRef;
   }
 }
