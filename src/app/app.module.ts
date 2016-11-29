@@ -60,7 +60,8 @@ import {MovieService} from "./movies/movies.service";
     GoogleplaceDirective,
     MoviesComponent,
     MovieDetailsComponent,
-    NewMovieComponent
+    NewMovieComponent,
+    GoogleplaceDirective
   ],
   providers: [
     ApiService,

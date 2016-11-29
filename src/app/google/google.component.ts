@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {GoogleplaceDirective} from "./googleplace.directive";
+//import {GoogleplaceDirective} from "./googleplace.directive";
 // import { GoogleMapComponent } from "./google-map/google-map.component";
 
 @Component({
   selector: 'google-api',
-  templateUrl: './google.component.html',
-  directives: [GoogleplaceDirective]
+  templateUrl: './google.component.html'
 })
 export class GoogleComponent implements OnInit {
 
-  mapValue1:any;
+  //mapValue1:any;
   constructor() {
     // Do stuff
   }
@@ -28,10 +27,10 @@ export class GoogleComponent implements OnInit {
     //mapValue1 = { latitue:lat, logitude:lng };
     //this.mapValue1 = new cordinates(latitude: lat, longitude: lng);
 
-    this.mapValue1 = {
+  /*  this.mapValue1 = {
       latitude:lat,
       longitude:lng
-    }
+    }*/
 
     console.log("Address Object", place);
   }
