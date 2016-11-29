@@ -2,26 +2,26 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-import {CarouselModule} from 'ng2-bootstrap/ng2-bootstrap';
+import {CarouselModule, ModalModule, TabsModule, TooltipModule, RatingModule} from 'ng2-bootstrap/ng2-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ApiService } from './shared';
 import { routing } from './app.routing';
-import { RatingModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 import { MenuComponent } from './menu/menu.component';
 import { ProductDeatailsComponent } from './product/pDetails/product.details.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './recipes/recipe-list/recipe-item.component';
-import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
-import { LoginComponent } from "./login/login.component";
-import { AuthenticationService } from "./login/authentication.service";
-import { RatingDemoComponent } from "./rating/rating.component";
-import { TooltipModule } from 'ng2-bootstrap/ng2-bootstrap';
-import { TooltipDemoComponent } from './tooltip/tooltip.component';
+import { BrandListComponent } from './brands/brand-list/brand-list.component';
+import {BrandDetailComponent} from './brands/brand-detail/brand-detail.component';
+import {ModalDemoComponent} from './pop-up/pop-up.component';
+import {BrandItemComponent} from './brands/brand-list/brand-item.component';
+import {RecommendationComponent} from "./recommended-items/recommend-item.component";
+import {TabsDemoComponent} from "./tabs/tab1.component";
+import {TooltipDemoComponent} from "./tooltip/tooltip.component";
+import {RatingDemoComponent} from "./rating/rating.component";
 
 @NgModule({
   imports: [
@@ -29,9 +29,11 @@ import { TooltipDemoComponent } from './tooltip/tooltip.component';
     HttpModule,
     FormsModule,
     CarouselModule,
-    routing,
+    ModalModule,
+    TabsModule,
+    TooltipModule,
     RatingModule,
-    TooltipModule
+    routing
   ],
   declarations: [
     AppComponent,
@@ -40,16 +42,17 @@ import { TooltipDemoComponent } from './tooltip/tooltip.component';
     MenuComponent,
     ProductDeatailsComponent,
     CarouselComponent,
-    RecipeListComponent,
-    RecipeItemComponent,
-    RecipeDetailComponent,
-    LoginComponent,
+    BrandListComponent,
+    BrandItemComponent,
+    ModalDemoComponent,
+    BrandDetailComponent,
+    RecommendationComponent,
+    TabsDemoComponent,
     RatingDemoComponent,
     TooltipDemoComponent
   ],
   providers: [
-    ApiService,
-    AuthenticationService
+    ApiService
   ],
   bootstrap: [AppComponent]
 })

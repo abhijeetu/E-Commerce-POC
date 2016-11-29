@@ -36,17 +36,17 @@
     padding:10px;
     font-family: sans-serif;
     font-size:11px;
-
+   
 }
 
 /* A blank image */
 .cloudzoom-blank {
-    background-image:url(../public/images/common/blank.png);
+    background-image:url(blank.png);
 }
 
 /* The animated ajax loading image */
 .cloudzoom-ajax-loader {
-    background-image:url(../public/images/common/ajax-loader.gif);
+    background-image:url(ajax-loader.gif);
     width:32px;
     height:32px;
 }

@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'home-page-carousel',
   templateUrl: './carousel.component.html'
-  // template : '<p>{{myInterval}}</p>'
 })
 export class CarouselComponent implements OnInit {
 
@@ -20,7 +19,7 @@ export class CarouselComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('Hello Carousal');
+
   }
 
 

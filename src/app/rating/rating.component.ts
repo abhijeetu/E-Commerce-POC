@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RatingComponent} from './rating';
+
 
 @Component({
   selector: 'rating-demo',

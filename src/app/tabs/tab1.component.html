@@ -1,0 +1,87 @@
+<div (click)="$event.preventDefault()">
+  <!--<p>Select a tab by setting active binding to true:</p>
+  <p>
+    <button type="button" class="btn btn-primary btn-sm"
+    (click)="tabs[0].active = true">Select second tab</button>
+    <button type="button" class="btn btn-primary btn-sm"
+    (click)="tabs[1].active = true">Select third tab</button>
+  </p>
+  <p>
+    <button type="button" class="btn btn-primary btn-sm" (click)="tabs[1].disabled = ! tabs[1].disabled">Enable / Disable third tab</button>
+  </p>
+  <hr />-->
+  <!--<tabset>
+    <tab heading="Static title">Static content</tab>
+    <tab *ngFor="let tabz of tabs"
+         [heading]="tabz.title"
+         [active]="tabz.active"
+         (select)="tabz.active = true"
+         (deselect)="tabz.active = false"
+         [disabled]="tabz.disabled"
+         [removable]="tabz.removable"
+         (removed)="removeTabHandler(tabz)"
+         [customClass]="tabz.customClass">
+      Hello {{tabz?.content}}
+    </tab>
+  </tabset>-->
+
+  <hr />
+
+  <!--<tabset [vertical]="true" type="pills">-->
+    <!--<tab heading="Vertical 1">Vertical content 1</tab>-->
+    <!--<tab heading="Vertical 2">Vertical content 2</tab>-->
+  <!--</tabset>-->
+
+  <tabset class="category-tab shop-details-tab">
+    <tab heading="Details"
+      [active]="active"
+      (select)="true">
+      Details
+    </tab>
+    <tab heading="Company Profile">
+      Company Profile
+    </tab>
+    <tab heading="Reviews (5)">
+      <div class="tab-pane fade active in" id="reviews" ><br/>
+        <!--<div class="col-sm-12">-->
+          <ul>
+            <li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
+            <li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
+            <li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
+          </ul>
+          <p><b>Write Your Review</b></p>
+
+          <form action="#">
+										<span>
+											<input type="text" placeholder="Your Name"/>
+											<input type="email" placeholder="Email Address"/>
+										</span>
+            <textarea name="" ></textarea>
+            <b>Rating: </b>
+            <span><rating-demo></rating-demo></span>
+            <button type="button" class="btn btn-default pull-right">
+              Submit
+            </button>
+          </form>
+        </div>
+      <!--</div>-->
+    </tab>
+    <!--<tab heading="Details" *ngFor="let tabz of tabs"
+         [heading]="tabz.title"
+         [active]="tabz.active"
+         (select)="tabz.active = true"
+         (deselect)="tabz.active = false"
+         [disabled]="tabz.disabled"
+         [removable]="tabz.removable"
+         (removed)="removeTabHandler(tabz)"
+         [customClass]="tabz.customClass">
+      Hello {{tabz?.content}}
+    </tab>-->
+    <!--<tab heading="Company Profile">-->
+      <!--Company Profile-->
+    <!--</tab>-->
+    <!--<tab heading="Tag">Tag</tab>-->
+    <!--<tab heading="Reviews">Reviews</tab>-->
+  </tabset>
+</div>
+
