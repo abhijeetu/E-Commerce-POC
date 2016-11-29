@@ -1,13 +1,13 @@
 import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
-  selector: 'brand-detail',
-  templateUrl: './brand-detail.component.html'
+  selector: 'rb-recipe-detail',
+  templateUrl: './recipe-detail.component.html'
 })
-export class BrandDetailComponent implements OnInit {
+export class RecipeDetailComponent implements OnInit {
 
   // property-binding
-  @Input() selectedBrand;
+  @Input() selectedRecipe;
 
   constructor() {
 

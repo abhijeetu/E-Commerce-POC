@@ -1,4 +1,4 @@
-export class Brand {
+export class Recipe {
   constructor(public arr : any[]) {
 
   }

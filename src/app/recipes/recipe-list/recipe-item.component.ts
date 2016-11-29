@@ -1,10 +1,10 @@
 import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
-  selector: 'brand-item',
-  templateUrl: './brand-item.component.html'
+  selector: 'rb-recipe-item',
+  templateUrl: './recipe-item.component.html'
 })
-export class BrandItemComponent implements OnInit {
+export class RecipeItemComponent implements OnInit {
 
   // set from outside of this component
   @Input() recipe;
