@@ -1,0 +1,29 @@
+<div class="col-xs-8 col-xs-offset-2">
+  <table class="table movietable ng-scope">
+    <tbody>
+    <tr>
+      <td><h3 class="ng-binding">Details for {{movie.title}}</h3></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Movie Title</td>
+      <td class="ng-binding">{{movie.title}}</td>
+    </tr>
+    <tr>
+      <td>Director</td>
+      <td class="ng-binding">{{movie.director}}</td>
+    </tr>
+    <tr>
+      <td>Release Year</td>
+      <td class="ng-binding">{{movie.releaseYear}}</td>
+    </tr>
+    <tr>
+      <td>Movie Genre</td>
+      <td class="ng-binding">{{movie.genre}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="ng-scope">
+    <a class="btn btn-primary" (click)="editMovie(movie._id)">Edit</a>
+  </div>
+</div>

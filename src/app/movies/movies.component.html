@@ -1,0 +1,18 @@
+<div class="container">
+<a class="btn-primary btn-lg nodecoration" (click)="createNewMovie()">Add New Movie</a>
+
+<table class="table movietable ng-scope">
+  <tbody>
+  <tr>
+    <td><h3>All Movies</h3></td>
+    <td></td>
+  </tr>
+  <tr *ngFor="let movie of movies" >
+    <td class="ng-binding">{{movie.title}}</td>
+    <td>
+      <a class="btn btn-primary" (click)="gotoMovieDetails(movie._id)" >View</a>
+      <a class="btn btn-danger" (click)="deleteMovie(movie._id); false">Delete</a>
+    </td>
+  </tr>
+  </tbody></table>
+</div>

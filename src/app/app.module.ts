@@ -24,6 +24,10 @@ import {TooltipDemoComponent} from "./tooltip/tooltip.component";
 import {RatingDemoComponent} from "./rating/rating.component";
 import {GoogleComponent} from "./google/google.component";
 import {GoogleplaceDirective} from "./google/googleplace.directive";
+import {MoviesComponent} from "./movies/movies.component";
+import {MovieDetailsComponent} from "./movies/movie.details.component";
+import {NewMovieComponent} from "./movies/movie.new.component";
+import {MovieService} from "./movies/movies.service";
 
 @NgModule({
   imports: [
@@ -53,10 +57,14 @@ import {GoogleplaceDirective} from "./google/googleplace.directive";
     RatingDemoComponent,
     TooltipDemoComponent,
     GoogleComponent,
-    GoogleplaceDirective
+    GoogleplaceDirective,
+    MoviesComponent,
+    MovieDetailsComponent,
+    NewMovieComponent
   ],
   providers: [
-    ApiService
+    ApiService,
+    MovieService
   ],
   bootstrap: [AppComponent]
 })
