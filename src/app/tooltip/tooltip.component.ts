@@ -6,8 +6,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TooltipDemoComponent {
-  public dynamicTooltip:string = 'Digital Single Lense Reflex';
-  public dynamicTooltipText:string = 'DSLR';
+  public dynamicTooltip:string = 'Address: Texas';
+  public dynamicTooltipText:string = 'EShopper';
 
   public tooltipStateChanged(state: boolean):void {
     console.log(`Tooltip is open: ${state}`);

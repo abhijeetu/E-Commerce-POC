@@ -22,6 +22,8 @@ import {RecommendationComponent} from "./recommended-items/recommend-item.compon
 import {TabsDemoComponent} from "./tabs/tab1.component";
 import {TooltipDemoComponent} from "./tooltip/tooltip.component";
 import {RatingDemoComponent} from "./rating/rating.component";
+import {GoogleComponent} from "./google/google.component";
+import {GoogleplaceDirective} from "./google/googleplace.directive";
 
 @NgModule({
   imports: [
@@ -49,7 +51,9 @@ import {RatingDemoComponent} from "./rating/rating.component";
     RecommendationComponent,
     TabsDemoComponent,
     RatingDemoComponent,
-    TooltipDemoComponent
+    TooltipDemoComponent,
+    GoogleComponent,
+    GoogleplaceDirective
   ],
   providers: [
     ApiService
