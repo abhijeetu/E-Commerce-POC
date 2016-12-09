@@ -1,0 +1,21 @@
+<h1>Locality</h1>
+<form (ngSubmit)="onSubmit()">
+  <input type="radio" name="location" value="recircle" [(ngModel)]="locality.value"> Recircle Store<br>
+  <input type="radio" name="location" value="meetUp" [(ngModel)]="locality.value" (click)="GetLocation()"> Meet Up<br>
+  <br/>
+  <div *ngIf="locality.value == 'recircle'">
+    <google-map  [inputAddress]="mapCoordinates"></google-map>
+  </div>
+  <div *ngIf="locality.value == 'meetUp'">
+      <h2>Basic List Group</h2>
+      <ul class="list-group">
+        <li class="list-group-item" >Owners Location</li>
+        <li class="list-group-item">Renters Location</li>
+        <li class="list-group-item">Custom Location
+          Enter Location : <google-api (addressUpdated)="addressUpdated($event)"></google-api>
+        </li>
+      </ul>
+    <google-map  [inputAddress]="mapCoordinates"></google-map>
+    </div>
+  <br/>
+</form>

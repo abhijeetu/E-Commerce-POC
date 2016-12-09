@@ -1,39 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Output, Input} from '@angular/core';
+import {EventEmitter} from "@angular/common/src/facade/async";
 //import {GoogleplaceDirective} from "./googleplace.directive";
 // import { GoogleMapComponent } from "./google-map/google-map.component";
 
 @Component({
   selector: 'google-api',
-  templateUrl: './google.component.html'
+  templateUrl: './google.component.html',
 })
-export class GoogleComponent implements OnInit {
+export class GoogleComponent {
 
-  //mapValue1:any;
-  constructor() {
-    // Do stuff
-  }
-
-  ngOnInit() {
-    console.log('Hello Home');
-  }
+  @Output() addressUpdated = new EventEmitter();
 
   public address: Object;
+  addressDetails = {};
+
+  constructor() {
+  }
 
   getAddress(place: Object) {
+    console.log(place);
     this.address = place['formatted_address'];
+    console.log("addresssssssss: ");
+    console.log(this.address);
     var location = place['geometry']['location'];
     var lat = location.lat();
     var lng = location.lng();
-    //mapValue1 = { latitue:lat, logitude:lng };
-    //this.mapValue1 = new cordinates(latitude: lat, longitude: lng);
 
-  /*  this.mapValue1 = {
-      latitude:lat,
-      longitude:lng
-    }*/
-
-    console.log("Address Object", place);
+    this.addressDetails = {
+      'lat' : lat,
+      'lng' : lng
+    };
+    this.addressUpdated.emit(this.addressDetails);
   }
 }
-
-

@@ -1,6 +1,6 @@
 declare let CloudZoom: any;
-import {Component, OnInit, Input, ViewChild} from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import {Component, OnInit, Input, ViewChild, Output, EventEmitter} from '@angular/core';
+import { Router, ActivatedRoute } from "@angular/router";
 import '../../../js/cloudzoom.js'
 import {ModalDemoComponent} from '../../pop-up/pop-up.component';
 
@@ -11,14 +11,16 @@ import {ModalDemoComponent} from '../../pop-up/pop-up.component';
 export class ProductDeatailsComponent implements OnInit {
 
   @ViewChild(ModalDemoComponent) public modal: ModalDemoComponent;
-  @Input() itemStatus: any;
+  @Output() addressDetails = new EventEmitter();
   id: any;
   modalData1 = {
-    'typeOfModal' : 'addToCart'
+    'typeOfModal': 'addToCart'
   };
+  showMap = false;
+  inputAddress : any;
 
-
-  constructor(router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
     CloudZoom.quickStart();
@@ -30,4 +32,16 @@ export class ProductDeatailsComponent implements OnInit {
       this.modalData1['quantity'] = params['quantity'];
     });
   }
+
+  addressUpdated(addr) {
+    this.inputAddress = addr;
+    this.addressDetails.emit(addr);
+    this.showMap = true;
+  }
+
+  redirectToLocality() {
+    this.router.navigate(['/locality']);
+  }
+
+
 }

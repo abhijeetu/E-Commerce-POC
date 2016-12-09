@@ -16,10 +16,17 @@ export class MovieService {
 
   getMovies(): Observable <Movie[]>
   {
-    return this.http.get(this.restURL)
+    // var address ="pune";
+    // return this.http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' +
+    //   address + '&key=AIzaSyBZVOSPh0Z4mv9jljJWzZNSug6upuec7Sg')
+    //   .map((res:Response) => res.json())
+    //   .do(data=>console.log("========="+JSON.stringify(data)))
+    //   .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+
+  /*  return this.http.get(this.restURL)
       .map((res:Response) => res.json())
       .do(data=>console.log(JSON.stringify(data)))
-      .catch((error:any) => Observable.throw(error.json().error || 'Server error'))
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'))*/
   }
 
   getSingleMovie(id:number): Observable <Movie>
@@ -53,6 +60,15 @@ export class MovieService {
   removeMovie (id:number): Observable<Movie[]> {
     return this.http.delete(`${this.restURL}/${id}`)
       .map((res:Response) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
+  getCoordinates(address) {
+    //var address ="pune";
+    return this.http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' +
+      address + '&key=AIzaSyBZVOSPh0Z4mv9jljJWzZNSug6upuec7Sg')
+      .map((res:Response) => res.json())
+      .do(data=>console.log("========="+JSON.stringify(data)))
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
 

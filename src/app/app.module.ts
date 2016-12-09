@@ -29,6 +29,10 @@ import {MovieDetailsComponent} from "./movies/movie.details.component";
 import {NewMovieComponent} from "./movies/movie.new.component";
 import {MovieService} from "./movies/movies.service";
 
+import {AgmCoreModule}from 'angular2-google-maps/core';
+import {GoogleMapComponent} from "./google-map/google-map.component";
+import {LocalityComponent} from "./locality/locality.component";
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -39,7 +43,10 @@ import {MovieService} from "./movies/movies.service";
     TabsModule,
     TooltipModule,
     RatingModule,
-    routing
+    routing,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyC6VUtJaER-7gOEEP49njviIWpTeuLXgNc'
+    })
   ],
   declarations: [
     AppComponent,
@@ -61,7 +68,9 @@ import {MovieService} from "./movies/movies.service";
     MoviesComponent,
     MovieDetailsComponent,
     NewMovieComponent,
-    GoogleplaceDirective
+    GoogleplaceDirective,
+    GoogleMapComponent,
+    LocalityComponent
   ],
   providers: [
     ApiService,
