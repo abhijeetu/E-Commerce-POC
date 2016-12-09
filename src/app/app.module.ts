@@ -18,20 +18,20 @@ import { BrandListComponent } from './brands/brand-list/brand-list.component';
 import {BrandDetailComponent} from './brands/brand-detail/brand-detail.component';
 import {ModalDemoComponent} from './pop-up/pop-up.component';
 import {BrandItemComponent} from './brands/brand-list/brand-item.component';
-import {RecommendationComponent} from "./recommended-items/recommend-item.component";
-import {TabsDemoComponent} from "./tabs/tab1.component";
-import {TooltipDemoComponent} from "./tooltip/tooltip.component";
-import {RatingDemoComponent} from "./rating/rating.component";
-import {GoogleComponent} from "./google/google.component";
-import {GoogleplaceDirective} from "./google/googleplace.directive";
-import {MoviesComponent} from "./movies/movies.component";
-import {MovieDetailsComponent} from "./movies/movie.details.component";
-import {NewMovieComponent} from "./movies/movie.new.component";
-import {MovieService} from "./movies/movies.service";
+import {RecommendationComponent} from './recommended-items/recommend-item.component';
+import {TabsDemoComponent} from './tabs/tab1.component';
+import {TooltipDemoComponent} from './tooltip/tooltip.component';
+import {RatingDemoComponent} from './rating/rating.component';
+import {GoogleComponent} from './google/google.component';
+import {GoogleplaceDirective} from './google/googleplace.directive';
+import {MoviesComponent} from './movies/movies.component';
+import {MovieDetailsComponent} from './movies/movie.details.component';
+import {NewMovieComponent} from './movies/movie.new.component';
+import {MovieService} from './movies/movies.service';
 
 import {AgmCoreModule}from 'angular2-google-maps/core';
-import {GoogleMapComponent} from "./google-map/google-map.component";
-import {LocalityComponent} from "./locality/locality.component";
+import {GoogleMapComponent} from './google-map/google-map.component';
+import {LocalityComponent} from './locality/locality.component';
 
 @NgModule({
   imports: [

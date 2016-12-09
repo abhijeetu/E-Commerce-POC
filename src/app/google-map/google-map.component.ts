@@ -1,5 +1,7 @@
 import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 
+declare var google:any;
+
 @Component({
   selector: 'google-map',
   templateUrl: './google-map.component.html',
@@ -12,13 +14,26 @@ import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 export class GoogleMapComponent implements OnChanges {
   // google maps zoom level
   zoom: number = 4;
-
   // initial center position for the map
   lat: number = 18.5074;
   lng: number = 73.8077;
   place: 'Renters Location';
   markers: marker[] = [];
   @Input() inputAddress;
+  // instantiate google map objects for directions
+  public directionsDisplay = new google.maps.DirectionsRenderer();
+  public directionsService = new google.maps.DirectionsService();
+  geocoder = new google.maps.Geocoder();
+
+
+  map = {
+  control: {},
+  center: {
+    latitude: -37.812150,
+    longitude: 144.971008
+  },
+  zoom: 14
+};
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes["inputAddress"]) {
@@ -52,14 +67,59 @@ export class GoogleMapComponent implements OnChanges {
     console.log('dragEnd', m, $event);
   }
 
+  getDirections = function () {
+    var request = {
+      origin: 'Satara, Pune',
+      destination: 'Kothrud, Pune',
+      travelMode: google.maps.DirectionsTravelMode.DRIVING
+    };
+    this.directionsService.route(request, function (response, status) {
+      console.log("Status : "+status);
+      console.log(response);
+      if (status === google.maps.DirectionsStatus.OK) {
+        this.directionsDisplay = new google.maps.DirectionsRenderer();
+        this.directionsService = new google.maps.DirectionsService();
+
+        this.directionsDisplay.setDirections(response);
+        this.directionsDisplay.setMap(this.map.control.getGMap());
+        this.directionsDisplay.setPanel(document.getElementById('directionsList'));
+        this.directions.showList = true;
+      } else {
+        alert('Google route unsuccesfull!');
+      }
+    });
+  }
+
   constructor() {
     this.markers.push({
       lat: this.lat,
       lng: this.lng,
       place : this.place
     });
+  //  this.getDirections();
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // just an interface for type safety.
 interface marker {
